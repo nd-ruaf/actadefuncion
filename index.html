@@ -17,71 +17,97 @@
             color: #6c757d;
             font-weight: normal;
         }
-        .texto-negro {
-            color: black;
-            font-weight: normal;
-        }
         footer a {
             color: #0099ff;
         }
+        .jumbotron {
+            border-radius: 10px;
+        }
     </style>
+    <script>
+        // Función para obtener la fecha y hora actual
+        function mostrarFechaValidacion() {
+            const fecha = new Date();
+            const opcionesFecha = { year: 'numeric', month: '2-digit', day: '2-digit' };
+            const opcionesHora = { hour: '2-digit', minute: '2-digit', second: '2-digit' };
+
+            const fechaActual = fecha.toLocaleDateString('es-ES', opcionesFecha);
+            const horaActual = fecha.toLocaleTimeString('es-ES', opcionesHora);
+
+            // Insertar la fecha y hora en el elemento correspondiente
+            document.getElementById('fecha-validacion').textContent = `${fechaActual} ${horaActual}`;
+        }
+
+        // Ejecutar la función al cargar la página
+        window.onload = mostrarFechaValidacion;
+    </script>
 </head>
 <body>
-    <header class="container-fluid bg-dark text-white">
+    <header class="container-fluid bg-dark text-white py-3">
         <div class="row align-items-center">
             <div class="col-6 text-start">
-                <img src="https://th.bing.com/th/id/R.76ba9edda0991a141307fcc8dff38114?rik=vuAU6Xroq8BI2g&pid=ImgRaw&r=0" alt="Logominsalud" height="70">
+                <img src="https://th.bing.com/th/id/R.76ba9edda0991a141307fcc8dff38114?rik=vuAU6Xroq8BI2g&pid=ImgRaw&r=0" alt="Logominsalud" class="img-fluid" style="max-height: 70px;">
             </div>
             <div class="col-6 text-end">
-                <img src="https://nd.ruaf.gov.co/NDv2_CertificadoValidador/Images/Logo_App2.png" alt="Logo App2" height="70">
+                <img src="https://nd.ruaf.gov.co/NDv2_CertificadoValidador/Images/Logo_App2.png" alt="Logo App2" class="img-fluid" style="max-height: 70px;">
             </div>
         </div>  
     </header>
 
     <main class="container mt-4">
         <section>
-            <div class="jumbotron p-4 bg-light">
-                <h2>
+            <div class="jumbotron bg-light p-4">
+                <h2 class="text-center mb-4">
                     <b class="titulo-negro">Certificado de defunción: 24099220048960</b>
                 </h2>
-                <h3>
-                    <span class="pregunta-azul">Tipo de defunción: </span>
-                    <span class="respuesta-gris">No fetal</span>
-                </h3>
-                <h3>
-                    <span class="pregunta-azul">Fallecido: </span>
-                    <span class="respuesta-gris">CC73559596 - LUIS ENRIQUE PAYARES MENDOZA</span>
-                </h3>
-                <h3>
-                    <span class="pregunta-azul">Lugar de defunción: </span>
-                    <span class="respuesta-gris">GUAJIRA - MAICAO</span>
-                </h3>
-                <h3>
-                    <span class="pregunta-azul">Institución prestadora de servicio de salud: </span>
-                    <span class="respuesta-gris">HOSPITAL - MAICAO - EMPRESA SOCIAL DEL ESTADO UNIDAD DE ATENCIÓN EN SALUD - MAICAO</span>
-                </h3>
-                <h3>
-                    <span class="pregunta-azul">Estado de registro: </span>
-                    <span class="respuesta-gris">Activo</span>
-                </h3>
-                <h3>
-                    <span class="pregunta-azul">Fecha de registro: </span>
-                    <span class="respuesta-gris">2024-12-27</span>
-                </h3>
-                <h3>
-                    <span class="pregunta-azul">Fecha de impresión: </span>
-                    <span class="respuesta-gris">2024-12-28 09:14</span>
-                </h3>
-                <h3>
-                    <span class="pregunta-azul">Fecha de validación: </span>
-                    <span class="respuesta-gris">2024-12-27 06:30</span>
-                </h3>
+                <div class="row">
+                    <div class="col-md-6 col-12">
+                        <h3>
+                            <span class="pregunta-azul">Tipo de defunción: </span>
+                            <span class="respuesta-gris">No fetal</span>
+                        </h3>
+                        <h3>
+                            <span class="pregunta-azul">Fallecido: </span>
+                            <span class="respuesta-gris">CC73559596 - LUIS ENRIQUE PAYARES MENDOZA</span>
+                        </h3>
+                        <h3>
+                            <span class="pregunta-azul">Lugar de defunción: </span>
+                            <span class="respuesta-gris">GUAJIRA - MAICAO</span>
+                        </h3>
+                    </div>
+                    <div class="col-md-6 col-12">
+                        <h3>
+                            <span class="pregunta-azul">Institución prestadora de servicio de salud: </span>
+                            <span class="respuesta-gris">HOSPITAL - MAICAO - EMPRESA SOCIAL DEL ESTADO UNIDAD DE ATENCIÓN EN SALUD - MAICAO</span>
+                        </h3>
+                        <h3>
+                            <span class="pregunta-azul">Estado de registro: </span>
+                            <span class="respuesta-gris">Activo</span>
+                        </h3>
+                        <h3>
+                            <span class="pregunta-azul">Fecha de registro: </span>
+                            <span class="respuesta-gris">2024-12-27</span>
+                        </h3>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-12 text-center">
+                        <h3>
+                            <span class="pregunta-azul">Fecha de impresión: </span>
+                            <span class="respuesta-gris">2024-12-28 09:14</span>
+                        </h3>
+                        <h3>
+                            <span class="pregunta-azul">Fecha de validación: </span>
+                            <span class="respuesta-gris" id="fecha-validacion"></span>
+                        </h3>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
 
-    <footer class="container-fluid bg-dark text-white text-center mt-4">
-        <div class="py-3 border-top border-secondary">
+    <footer class="container-fluid bg-dark text-white text-center mt-4 py-3">
+        <div class="border-top border-secondary py-3">
             <p>
                 <span class="fw-bold">Atención al usuario:</span> Teléfono en Bogotá D.C. +57(1)330 5043, en el resto del país 018000 960020<br>
                 Horario de lunes a viernes 7am a 6pm, sábados de 8am a 1pm jornada continua - Centro de Contacto al Ciudadano<br>
@@ -95,6 +121,5 @@
             </p>
         </div>
     </footer>
-
 </body>
 </html>
