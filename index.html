@@ -6,174 +6,63 @@
     <title>Certificado de Defunción</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        /* Global box-sizing rule */
-        * {
-            -webkit-box-sizing: border-box;
-            -moz-box-sizing: border-box;
-            box-sizing: border-box;
-        }
-
-        /* Base font family and style */
         body {
-            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-family: Arial, sans-serif;
             font-size: 14px;
-            line-height: 1.42857143;
-            color: #333;
-            background-color: #fff;
+            line-height: 1.6;
+            color: #000;
+            background-color: #f2f2f2;
         }
 
-        html {
-            font-size: 10px;
-            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        .certificado {
+            background-color: #f8f9fa; /* Fondo gris claro */
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
-        /* Adjusts for font size inheritance */
-        .h1, .h2, .h3, h1, h2, h3 {
-            font-family: inherit;
-            font-weight: 500;
-            line-height: 1.1;
-            color: inherit;
-            margin-top: 20px;
-            margin-bottom: 10px;
+        .certificado h2 {
+            color: #d63384; /* Rosa */
+            font-weight: bold;
+            text-align: left;
         }
 
-        /* Specific style for h3 */
-        .h3, h3 {
-            font-size: 24px;
+        .info {
+            color: #212529;
+            font-size: 16px;
         }
 
-        /* Jumbotron styling */
-        .jumbotron {
-            padding-top: 30px;
-            padding-bottom: 30px;
-            margin-bottom: 30px;
-            color: inherit;
-            background-color: #eee;
+        .label {
+            color: #0d6efd; /* Azul */
+            font-weight: bold;
         }
 
-        /* Title and Question-Answer styling */
-        .titulo-negro {
-            color: black;
-            font-weight: normal;
-        }
-
-        .pregunta-azul {
-            color: #0044cc;
-        }
-
-        .respuesta-gris {
+        .footer {
+            font-size: 12px;
             color: #6c757d;
-            font-weight: normal;
-        }
-
-        /* Footer and link styling */
-        footer a {
-            color: #0099ff;
-        }
-
-        /* Jumbotron border-radius */
-        .jumbotron {
-            border-radius: 10px;
+            text-align: center;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
-    <header class="container-fluid bg-dark text-white py-3">
-        <div class="row align-items-center">
-            <div class="col-6 text-start">
-                <img src="https://th.bing.com/th/id/R.76ba9edda0991a141307fcc8dff38114?rik=vuAU6Xroq8BI2g&pid=ImgRaw&r=0" alt="Logominsalud" class="img-fluid" style="max-height: 70px;">
-            </div>
-            <div class="col-6 text-end">
-                <img src="https://nd.ruaf.gov.co/NDv2_CertificadoValidador/Images/Logo_App2.png" alt="Logo App2" class="img-fluid" style="max-height: 70px;">
-            </div>
-        </div>  
-    </header>
-
     <main class="container mt-4">
-        <section>
-            <div class="jumbotron bg-light p-4">
-                <h2 class="text-center mb-4">
-                    <b class="titulo-negro">Certificado de defunción: 24099220048960</b>
-                </h2>
-                <div class="row">
-                    <div class="col-md-6 col-12">
-                        <h3>
-                            <span class="pregunta-azul">Tipo de defunción: </span>
-                            <span class="respuesta-gris">No fetal</span>
-                        </h3>
-                        <h3>
-                            <span class="pregunta-azul">Fallecido: </span>
-                            <span class="respuesta-gris">CC73559596 - LUIS ENRIQUE PAYARES MENDOZA</span>
-                        </h3>
-                        <h3>
-                            <span class="pregunta-azul">Lugar de defunción: </span>
-                            <span class="respuesta-gris">GUAJIRA - MAICAO</span>
-                        </h3>
-                    </div>
-                    <div class="col-md-6 col-12">
-                        <h3>
-                            <span class="pregunta-azul">Institución prestadora de servicio de salud: </span>
-                            <span class="respuesta-gris">HOSPITAL - MAICAO - EMPRESA SOCIAL DEL ESTADO UNIDAD DE ATENCIÓN EN SALUD - MAICAO</span>
-                        </h3>
-                        <h3>
-                            <span class="pregunta-azul">Estado de registro: </span>
-                            <span class="respuesta-gris">Activo</span>
-                        </h3>
-                        <h3>
-                            <span class="pregunta-azul">Fecha de registro: </span>
-                            <span class="respuesta-gris">2024-12-27</span>
-                        </h3>
-                    </div>
-                </div>
-                <div class="row mt-4">
-                    <div class="col-12 text-center">
-                        <h3>
-                            <span class="pregunta-azul">Fecha de impresión: </span>
-                            <span class="respuesta-gris">2024-12-28 09:14</span>
-                        </h3>
-                        <h3>
-                            <span class="pregunta-azul">Fecha de validación: </span>
-                            <span class="respuesta-gris" id="fecha-validacion"></span>
-                        </h3>
-                    </div>
-                </div>
-            </div>
+        <section class="certificado">
+            <h2>Certificado de defunción: <span>23017820154112</span></h2>
+            <p class="info"><span class="label">Tipo de defunción:</span> No fetal</p>
+            <p class="info"><span class="label">Fallecido:</span> CC2530126 - LUIS ALBERTO CALDERON</p>
+            <p class="info"><span class="label">Lugar de defunción:</span> VALLE DEL CAUCA - CALI</p>
+            <p class="info"><span class="label">Institución prestadora de servicio de salud:</span> CLINICA FARALLONES</p>
+            <p class="info"><span class="label">Estado de registro:</span> Activo-Modificado</p>
+            <p class="info"><span class="label">Fecha de registro:</span> 2023-01-13</p>
+            <p class="info"><span class="label">Fecha de impresión:</span> 2023-01-13 17:39</p>
+            <p class="info"><span class="label">Fecha de validación:</span> 2024-12-18 04:09</p>
         </section>
     </main>
 
-    <footer class="container-fluid bg-dark text-white text-center mt-4 py-3">
-        <div class="border-top border-secondary py-3">
-            <p>
-                <span class="fw-bold">Atención al usuario:</span> Teléfono en Bogotá D.C. +57(1)330 5043, en el resto del país 018000 960020<br>
-                Horario de lunes a viernes 7am a 6pm, sábados de 8am a 1pm jornada continua - Centro de Contacto al Ciudadano<br>
-                Correo electrónico:
-                <a href="mailto:soportend@minsalud.gov.co?subject=Soporte MIPRES" class="text-decoration-underline">
-                    soportend@minsalud.gov.co
-                </a>
-            </p>
-            <p class="fw-bold">Versión - 1.0.0.0<br>
-                Copyright © 2024 - Ministerio de Salud y Protección Social
-            </p>
-        </div>
+    <footer class="footer">
+        <p>Atención al usuario: Teléfono en Bogotá D.C. +57(1)330 5043, resto del país 018000 960020</p>
+        <p>Copyright © 2024 - Ministerio de Salud y Protección Social</p>
     </footer>
-
-    <script>
-        // Función para obtener la fecha y hora actual
-        function mostrarFechaValidacion() {
-            const fecha = new Date();
-            const opcionesFecha = { year: 'numeric', month: '2-digit', day: '2-digit' };
-            const opcionesHora = { hour: '2-digit', minute: '2-digit', second: '2-digit' };
-
-            const fechaActual = fecha.toLocaleDateString('es-ES', opcionesFecha);
-            const horaActual = fecha.toLocaleTimeString('es-ES', opcionesHora);
-
-            // Insertar la fecha y hora en el elemento correspondiente
-            document.getElementById('fecha-validacion').textContent = `${fechaActual} ${horaActual}`;
-        }
-
-        // Ejecutar la función al cargar la página
-        window.onload = mostrarFechaValidacion;
-    </script>
 </body>
 </html>
-
