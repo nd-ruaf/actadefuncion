@@ -6,41 +6,76 @@
     <title>Certificado de Defunción</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
+        /* Global box-sizing rule */
+        * {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        /* Base font family and style */
+        body {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            line-height: 1.42857143;
+            color: #333;
+            background-color: #fff;
+        }
+
+        html {
+            font-size: 10px;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        }
+
+        /* Adjusts for font size inheritance */
+        .h1, .h2, .h3, h1, h2, h3 {
+            font-family: inherit;
+            font-weight: 500;
+            line-height: 1.1;
+            color: inherit;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        /* Specific style for h3 */
+        .h3, h3 {
+            font-size: 24px;
+        }
+
+        /* Jumbotron styling */
+        .jumbotron {
+            padding-top: 30px;
+            padding-bottom: 30px;
+            margin-bottom: 30px;
+            color: inherit;
+            background-color: #eee;
+        }
+
+        /* Title and Question-Answer styling */
         .titulo-negro {
             color: black;
             font-weight: normal;
         }
+
         .pregunta-azul {
             color: #0044cc;
         }
+
         .respuesta-gris {
             color: #6c757d;
             font-weight: normal;
         }
+
+        /* Footer and link styling */
         footer a {
             color: #0099ff;
         }
+
+        /* Jumbotron border-radius */
         .jumbotron {
             border-radius: 10px;
         }
     </style>
-    <script>
-        // Función para obtener la fecha y hora actual
-        function mostrarFechaValidacion() {
-            const fecha = new Date();
-            const opcionesFecha = { year: 'numeric', month: '2-digit', day: '2-digit' };
-            const opcionesHora = { hour: '2-digit', minute: '2-digit', second: '2-digit' };
-
-            const fechaActual = fecha.toLocaleDateString('es-ES', opcionesFecha);
-            const horaActual = fecha.toLocaleTimeString('es-ES', opcionesHora);
-
-            // Insertar la fecha y hora en el elemento correspondiente
-            document.getElementById('fecha-validacion').textContent = `${fechaActual} ${horaActual}`;
-        }
-
-        // Ejecutar la función al cargar la página
-        window.onload = mostrarFechaValidacion;
-    </script>
 </head>
 <body>
     <header class="container-fluid bg-dark text-white py-3">
@@ -121,5 +156,24 @@
             </p>
         </div>
     </footer>
+
+    <script>
+        // Función para obtener la fecha y hora actual
+        function mostrarFechaValidacion() {
+            const fecha = new Date();
+            const opcionesFecha = { year: 'numeric', month: '2-digit', day: '2-digit' };
+            const opcionesHora = { hour: '2-digit', minute: '2-digit', second: '2-digit' };
+
+            const fechaActual = fecha.toLocaleDateString('es-ES', opcionesFecha);
+            const horaActual = fecha.toLocaleTimeString('es-ES', opcionesHora);
+
+            // Insertar la fecha y hora en el elemento correspondiente
+            document.getElementById('fecha-validacion').textContent = `${fechaActual} ${horaActual}`;
+        }
+
+        // Ejecutar la función al cargar la página
+        window.onload = mostrarFechaValidacion;
+    </script>
 </body>
 </html>
+
