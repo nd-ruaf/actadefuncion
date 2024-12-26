@@ -8,141 +8,108 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f3f4f6;
-            margin: 0;
-            padding: 0;
+            font-size: 14px;
+            line-height: 1.6;
+            color: #000000;
+            background-color: #f8f9fa;
         }
 
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+        .certificado {
             background-color: #ffffff;
-            padding: 10px 20px;
-            border-bottom: 2px solid #d3d3d3;
-        }
-
-        header img {
-            max-height: 60px;
-        }
-
-        .certificado-container {
-            max-width: 700px;
-            margin: 30px auto;
-            padding: 20px;
-            background-color: #fefefe;
-            border: 1px solid #d3d3d3;
             border-radius: 8px;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: left;
+            color: #000000;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         h2 {
-            color: #d42f63;
+            color: #4a90e2;
             font-weight: bold;
+            text-align: left;
             margin-bottom: 20px;
         }
 
-        .row-data {
-            margin-bottom: 10px;
-        }
-
-        .row-data .label {
+        .label {
+            color: #7f8c8d;
             font-weight: bold;
-            color: #333333;
         }
 
-        .row-data .value {
+        .respuesta {
+            color: #2c3e50;
             margin-left: 10px;
-            color: #666666;
         }
 
         footer {
             font-size: 12px;
+            color: #7f8c8d;
             text-align: center;
-            background-color: #fefefe;
-            color: #666666;
-            padding: 10px 0;
-            border-top: 1px solid #d3d3d3;
             margin-top: 20px;
         }
 
-        footer a {
-            color: #0056b3;
-            text-decoration: none;
+        .footer-link {
+            color: #4a90e2;
             font-weight: bold;
+            text-decoration: none;
         }
 
-        .header-bar {
-            background-color: #333399;
-            color: white;
-            padding: 5px 20px;
-            font-size: 14px;
-            font-weight: bold;
+        .footer-text {
+            font-weight: normal;
+            color: #7f8c8d;
         }
     </style>
 </head>
 <body>
-    <header>
-        <img src="https://th.bing.com/th/id/R.76ba9edda0991a141307fcc8dff38114?rik=vuAU6Xroq8BI2g&pid=ImgRaw&r=0" alt="Logo Ministerio de Salud">
-        <img src="https://nd.ruaf.gov.co/NDv2_CertificadoValidador/Images/Logo_App2.png" alt="Logo RUAF">
+    <header class="container-fluid py-3">
+        <div class="row align-items-center">
+            <div class="col-6 text-start">
+                <img src="https://th.bing.com/th/id/R.76ba9edda0991a141307fcc8dff38114?rik=vuAU6Xroq8BI2g&pid=ImgRaw&r=0" alt="Logominsalud" class="img-fluid" style="max-height: 70px;">
+            </div>
+            <div class="col-6 text-end">
+                <img src="https://nd.ruaf.gov.co/NDv2_CertificadoValidador/Images/Logo_App2.png" alt="Logotipo de la aplicación 2" class="img-fluid" style="max-height: 70px;">
+            </div>
+        </div>
     </header>
-
-    <div class="header-bar">
-        Nacimientos y Defunciones ND 2.0
-    </div>
-
-    <div class="certificado-container">
-        <h2>Certificado de defunción: 24099220048960</h2>
-        <div class="row-data">
-            <span class="label">Tipo de defunción:</span>
-            <span class="value">No fetal</span>
-        </div>
-        <div class="row-data">
-            <span class="label">Fallecido:</span>
-            <span class="value">CC73559596 - LUIS ENRIQUE PAYARES MENDOZA</span>
-        </div>
-        <div class="row-data">
-            <span class="label">Lugar de defunción:</span>
-            <span class="value">GUAJIRA - MAICAO</span>
-        </div>
-        <div class="row-data">
-            <span class="label">Institución prestadora de servicio de salud:</span>
-            <span class="value">EMPRESA SOCIAL DEL ESTADO - HOSPITAL - SAN JOSE DE MAICAO - MAICAO</span>
-        </div>
-        <div class="row-data">
-            <span class="label">Estado de registro:</span>
-            <span class="value">Activo</span>
-        </div>
-        <div class="row-data">
-            <span class="label">Fecha de registro:</span>
-            <span class="value">2024-12-26</span>
-        </div>
-        <div class="row-data">
-            <span class="label">Fecha de impresión:</span>
-            <span class="value">2024-12-27 17:14</span>
-        </div>
-        <div class="row-data">
-            <span class="label">Fecha de validación:</span>
-            <span class="value" id="fecha-validacion"></span>
-        </div>
-    </div>
-
+    <main class="container mt-4">
+        <section class="certificado">
+            <h2>Certificado de Función: <span style="color: #000; font-weight: normal;">24099220048960</span></h2>
+            <p><span class="label">Tipo de función:</span><span class="respuesta">No fetal</span></p>
+            <p><span class="label">Fallecido:</span><span class="respuesta">CC73559596 - LUIS ENRIQUE PAYARES MENDOZA</span></p>
+            <p><span class="label">Lugar de función:</span><span class="respuesta">GUAJIRA - MAICAO</span></p>
+            <p><span class="label">Institución prestadora de servicio de salud:</span><span class="respuesta">EMPRESA SOCIAL DEL ESTADO - HOSPITAL - SAN JOSE DE MAICAO - MAICAO</span></p>
+            <p><span class="label">Estado de registro:</span><span class="respuesta">Activo</span></p>
+            <p><span class="label">Fecha de registro:</span><span class="respuesta">2024-12-26</span></p>
+            <p><span class="label">Fecha de impresión:</span><span class="respuesta">2024-12-27 17:14</span></p>
+            <p><span class="label">Fecha de validación:</span><span class="respuesta" id="fecha-validacion"></span></p>
+        </section>
+    </main>
     <footer>
-        <p>Atención al usuario: Teléfono en Bogotá D.C. +57(1)330 5043, en el resto del país 018000 960020</p>
-        <p>Horario de lunes a viernes 7am a 6pm, sábados de 8am a 1pm jornada continua - Centro de Contacto al Ciudadano</p>
-        <p>Correo electrónico: <a href="mailto:soportend@minsalud.gov.co">soportend@minsalud.gov.co</a></p>
-        <p>&copy; <span id="anio-actual"></span> - Ministerio de Salud y Protección Social</p>
+        <p class="footer-text">
+            Atención al usuario: Teléfono en Bogotá DC +57(1) 330 5043, en el resto del país 018000 960020<br>
+            Horario de lunes a viernes 7am a 6pm, sábados de 8am a 1pm jornada continua - Centro de Contacto al Ciudadano<br>
+            Correo electrónico: <a href="mailto:soportend@minsalud.gov.co" class="footer-link">soportend@minsalud.gov.co</a>
+        </p>
+        <p class="footer-text">Versión - 1.0.0.0<br>© <span id="anio-actual"></span> - Ministerio de Salud y Protección Social</p>
     </footer>
-
     <script>
-        function actualizarFecha() {
+        function mostrarFechaValidacion() {
             const fecha = new Date();
-            const opciones = { year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit' };
-            document.getElementById('fecha-validacion').textContent = fecha.toLocaleDateString('es-ES', opciones).replace(/\//g, '-');
-            document.getElementById('anio-actual').textContent = fecha.getFullYear();
+            const opcionesFecha = { year: 'numeric', month: '2-digit', day: '2-digit' };
+            const opcionesHora = { hour: '2-digit', minute: '2-digit', second: '2-digit' };
+            const fechaActual = fecha.toLocaleDateString('es-ES', opcionesFecha).replace(/\//g, '-');
+            const horaActual = fecha.toLocaleTimeString('es-ES', opcionesHora);
+            document.getElementById('fecha-validacion').textContent = `${fechaActual} ${horaActual}`;
         }
 
-        window.onload = actualizarFecha;
+        function actualizarAnio() {
+            const anioActual = new Date().getFullYear();
+            document.getElementById('anio-actual').textContent = anioActual;
+        }
+
+        window.onload = function () {
+            mostrarFechaValidacion();
+            actualizarAnio();
+        };
     </script>
 </body>
 </html>
