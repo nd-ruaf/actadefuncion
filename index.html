@@ -8,18 +8,32 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
+            background-color: #f3f4f6;
             margin: 0;
             padding: 0;
         }
 
-        .certificado-container {
-            max-width: 600px;
-            margin: 20px auto;
-            padding: 20px;
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             background-color: #ffffff;
-            border: 1px solid #e0e0e0;
-            border-radius: 10px;
+            padding: 10px 20px;
+            border-bottom: 2px solid #d3d3d3;
+        }
+
+        header img {
+            max-height: 60px;
+        }
+
+        .certificado-container {
+            max-width: 700px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #fefefe;
+            border: 1px solid #d3d3d3;
+            border-radius: 8px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
         }
 
         h2 {
@@ -45,7 +59,10 @@
         footer {
             font-size: 12px;
             text-align: center;
+            background-color: #fefefe;
             color: #666666;
+            padding: 10px 0;
+            border-top: 1px solid #d3d3d3;
             margin-top: 20px;
         }
 
@@ -55,17 +72,12 @@
             font-weight: bold;
         }
 
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: #ffffff;
-            padding: 10px 20px;
-            border-bottom: 1px solid #e0e0e0;
-        }
-
-        header img {
-            max-height: 60px;
+        .header-bar {
+            background-color: #333399;
+            color: white;
+            padding: 5px 20px;
+            font-size: 14px;
+            font-weight: bold;
         }
     </style>
 </head>
@@ -74,6 +86,10 @@
         <img src="https://th.bing.com/th/id/R.76ba9edda0991a141307fcc8dff38114?rik=vuAU6Xroq8BI2g&pid=ImgRaw&r=0" alt="Logo Ministerio de Salud">
         <img src="https://nd.ruaf.gov.co/NDv2_CertificadoValidador/Images/Logo_App2.png" alt="Logo RUAF">
     </header>
+
+    <div class="header-bar">
+        Nacimientos y Defunciones ND 2.0
+    </div>
 
     <div class="certificado-container">
         <h2>Certificado de defunción: 24099220048960</h2>
