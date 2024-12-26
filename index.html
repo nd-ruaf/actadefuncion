@@ -90,7 +90,7 @@
             Horario de lunes a viernes 7am a 6pm, sábados de 8am a 1pm jornada continua - Centro de Contacto al Ciudadano<br>
             Correo electrónico: <a href="mailto:soportend@minsalud.gov.co" class="footer-link">soportend@minsalud.gov.co</a> Centro de Contacto al Ciudadano
         </p>
-        <p class="footer-text">Versión - 1.0.0.0<br>&copy; 2024 - Ministerio de Salud y Protección Social</p>
+        <p class="footer-text">Versión - 1.0.0.0<br>&copy; <span id="anio-actual"></span> - Ministerio de Salud y Protección Social</p>
     </footer>
 
     <script>
@@ -103,7 +103,16 @@
             const horaActual = fecha.toLocaleTimeString('es-ES', opcionesHora);
             document.getElementById('fecha-validacion').textContent = `${fechaActual} ${horaActual}`;
         }
-        window.onload = mostrarFechaValidacion;
+
+        function actualizarAnio() {
+            const anioActual = new Date().getFullYear();
+            document.getElementById('anio-actual').textContent = anioActual;
+        }
+
+        window.onload = function () {
+            mostrarFechaValidacion();
+            actualizarAnio();
+        };
     </script>
 </body>
 </html>
