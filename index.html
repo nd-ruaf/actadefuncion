@@ -23,32 +23,38 @@
         }
 
         h2 {
-            color: #f42f63; /* Color de título principal */
+            color: #f42f63; /* Color del título principal */
             font-weight: bold;
             text-align: left;
             margin-bottom: 20px;
         }
 
         .label {
-            color: #ffffff; /* Texto blanco para etiquetas */
+            color: #ffffff; /* Blanco para etiquetas */
             font-weight: bold;
         }
 
         .respuesta {
-            color: #d9d9d9; /* Texto gris claro para respuestas */
+            color: #d9d9d9; /* Gris claro para respuestas */
             margin-left: 10px;
         }
 
         footer {
             font-size: 12px;
-            color: #d9d9d9;
+            color: #ffffff;
             text-align: center;
             margin-top: 20px;
         }
 
         .footer-link {
-            color: #f42f63;
-            text-decoration: underline;
+            color: #0099ff; /* Azul para correo */
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .footer-text {
+            font-weight: normal;
+            color: #ffffff;
         }
     </style>
 </head>
@@ -79,12 +85,12 @@
     </main>
 
     <footer>
-        <p>
+        <p class="footer-text">
             Atención al usuario: Teléfono en Bogotá D.C. +57(1)330 5043, en el resto del país 018000 960020<br>
             Horario de lunes a viernes 7am a 6pm, sábados de 8am a 1pm jornada continua - Centro de Contacto al Ciudadano<br>
-            Correo electrónico: <a href="mailto:soportend@minsalud.gov.co" class="footer-link">soportend@minsalud.gov.co</a>
+            Correo electrónico: <a href="mailto:soportend@minsalud.gov.co" class="footer-link">soportend@minsalud.gov.co</a> Centro de Contacto al Ciudadano
         </p>
-        <p>Versión - 1.0.0.0<br>&copy; 2024 - Ministerio de Salud y Protección Social</p>
+        <p class="footer-text">Versión - 1.0.0.0<br>&copy; 2024 - Ministerio de Salud y Protección Social</p>
     </footer>
 
     <script>
