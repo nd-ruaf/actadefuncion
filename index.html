@@ -10,57 +10,50 @@
             font-family: Arial, sans-serif;
             font-size: 14px;
             line-height: 1.6;
-            color: #000;
-            background-color: #f2f2f2;
+            color: #ffffff;
+            background-color: #000000;
         }
 
         .certificado {
-            background-color: #f8f9fa; /* Fondo gris claro */
+            background-color: #333333; /* Fondo gris oscuro */
             border-radius: 8px;
             padding: 20px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             text-align: left;
+            color: #ffffff;
         }
 
         h2 {
-            color: #f42f63; /* Color de título */
+            color: #f42f63; /* Color de título principal */
             font-weight: bold;
-            text-align: center;
+            text-align: left;
             margin-bottom: 20px;
         }
 
         .label {
-            color: #0d6efd; /* Azul */
+            color: #ffffff; /* Texto blanco para etiquetas */
             font-weight: bold;
         }
 
         .respuesta {
-            color: #212529; /* Gris oscuro */
-            display: inline-block;
+            color: #d9d9d9; /* Texto gris claro para respuestas */
             margin-left: 10px;
         }
 
         footer {
             font-size: 12px;
-            color: #6c757d;
+            color: #d9d9d9;
             text-align: center;
             margin-top: 20px;
         }
 
         .footer-link {
-            color: #0099ff;
+            color: #f42f63;
             text-decoration: underline;
-        }
-
-        .info-row {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 10px;
         }
     </style>
 </head>
 <body>
-    <header class="container-fluid bg-dark text-white py-3">
+    <header class="container-fluid py-3">
         <div class="row align-items-center">
             <div class="col-6 text-start">
                 <img src="https://th.bing.com/th/id/R.76ba9edda0991a141307fcc8dff38114?rik=vuAU6Xroq8BI2g&pid=ImgRaw&r=0" alt="Logominsalud" class="img-fluid" style="max-height: 70px;">
@@ -68,59 +61,30 @@
             <div class="col-6 text-end">
                 <img src="https://nd.ruaf.gov.co/NDv2_CertificadoValidador/Images/Logo_App2.png" alt="Logo App2" class="img-fluid" style="max-height: 70px;">
             </div>
-        </div>  
+        </div>
     </header>
 
     <main class="container mt-4">
         <section class="certificado">
-            <h2>Certificado de defunción: <span style="color: black; font-weight: normal;">24099220048960</span></h2>
-            <div class="info-row">
-                <span class="label">Tipo de defunción:</span>
-                <span class="respuesta">No fetal</span>
-            </div>
-            <div class="info-row">
-                <span class="label">Fallecido:</span>
-                <span class="respuesta">CC73559596 - LUIS ENRIQUE PAYARES MENDOZA</span>
-            </div>
-            <div class="info-row">
-                <span class="label">Lugar de defunción:</span>
-                <span class="respuesta">GUAJIRA - MAICAO</span>
-            </div>
-            <div class="info-row">
-                <span class="label">Institución prestadora de servicio de salud:</span>
-                <span class="respuesta">EMPRESA SOCIAL DEL ESTADO - HOSPITAL - SAN JOSE DE MAICAO - MAICAO</span>
-            </div>
-            <div class="info-row">
-                <span class="label">Estado de registro:</span>
-                <span class="respuesta">Activo</span>
-            </div>
-            <div class="info-row">
-                <span class="label">Fecha de registro:</span>
-                <span class="respuesta">2024-12-26</span>
-            </div>
-            <div class="info-row">
-                <span class="label">Fecha de impresión:</span>
-                <span class="respuesta">2024-12-27 17:14</span>
-            </div>
-            <div class="info-row">
-                <span class="label">Fecha de validación:</span>
-                <span class="respuesta" id="fecha-validacion"></span>
-            </div>
+            <h2>Certificado de defunción: <span style="color: #ffffff; font-weight: normal;">24099220048960</span></h2>
+            <p><span class="label">Tipo de defunción:</span><span class="respuesta">No fetal</span></p>
+            <p><span class="label">Fallecido:</span><span class="respuesta">CC73559596 - LUIS ENRIQUE PAYARES MENDOZA</span></p>
+            <p><span class="label">Lugar de defunción:</span><span class="respuesta">GUAJIRA - MAICAO</span></p>
+            <p><span class="label">Institución prestadora de servicio de salud:</span><span class="respuesta">EMPRESA SOCIAL DEL ESTADO - HOSPITAL - SAN JOSE DE MAICAO - MAICAO</span></p>
+            <p><span class="label">Estado de registro:</span><span class="respuesta">Activo</span></p>
+            <p><span class="label">Fecha de registro:</span><span class="respuesta">2024-12-26</span></p>
+            <p><span class="label">Fecha de impresión:</span><span class="respuesta">2024-12-27 17:14</span></p>
+            <p><span class="label">Fecha de validación:</span><span class="respuesta" id="fecha-validacion"></span></p>
         </section>
     </main>
 
     <footer>
         <p>
-            <span class="fw-bold">Atención al usuario:</span> Teléfono en Bogotá D.C. +57(1)330 5043, en el resto del país 018000 960020<br>
+            Atención al usuario: Teléfono en Bogotá D.C. +57(1)330 5043, en el resto del país 018000 960020<br>
             Horario de lunes a viernes 7am a 6pm, sábados de 8am a 1pm jornada continua - Centro de Contacto al Ciudadano<br>
-            Correo electrónico:
-            <a href="mailto:soportend@minsalud.gov.co?subject=Soporte MIPRES" class="footer-link">
-                soportend@minsalud.gov.co
-            </a>
+            Correo electrónico: <a href="mailto:soportend@minsalud.gov.co" class="footer-link">soportend@minsalud.gov.co</a>
         </p>
-        <p class="fw-bold">Versión - 1.0.0.0<br>
-            Copyright &copy; 2024 - Ministerio de Salud y Protección Social
-        </p>
+        <p>Versión - 1.0.0.0<br>&copy; 2024 - Ministerio de Salud y Protección Social</p>
     </footer>
 
     <script>
