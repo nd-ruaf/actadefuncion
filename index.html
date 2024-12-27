@@ -7,148 +7,102 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: Arial, sans-serif;
             font-size: 14px;
             line-height: 1.6;
-            color: #000;
-            background-color: #f3f8fc;
-            margin: 0;
-            padding: 0;
-        }
-
-        .header {
-            background-color: #0056b3;
-            color: white;
-            padding: 10px 20px;
-            text-align: center;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .header img {
-            max-height: 50px;
-        }
-
-        .header h1 {
-            font-size: 20px;
-            margin: 0;
-            flex-grow: 1;
-            text-align: center;
+            color: #ffffff;
+            background-color: #000000;
         }
 
         .certificado {
-            border: 2px solid #0056b3;
-            padding: 20px;
-            margin: 20px auto;
-            background-color: #f5f5f5; /* Fondo gris */
+            background-color: #333333; /* Fondo gris oscuro */
             border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            max-width: 800px;
+            padding: 20px;
+            text-align: left;
+            color: #ffffff;
         }
 
         h2 {
-            color: #f42f63;
-            font-size: 18px;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .info {
-            margin-bottom: 20px;
-        }
-
-        .info-row {
-            margin-bottom: 10px;
-        }
-
-        .info-row span {
+            color: #f42f63; /* Color del título principal */
             font-weight: bold;
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .label {
+            color: #d3d3ff; /* Gris claro para preguntas */
+            font-weight: bold;
+        }
+
+        .respuesta {
+            color: #d9d9d9; /* Gris claro para respuestas */
+            margin-left: 10px;
         }
 
         footer {
             font-size: 12px;
-            color: white;
-            background-color: #0056b3;
+            color: #ffffff;
             text-align: center;
-            margin-top: 30px;
-            padding: 20px 10px;
+            margin-top: 20px;
         }
 
-        footer a {
-            color: #f3f8fc;
+        .footer-link {
+            color: #0099ff; /* Azul para correo */
+            font-weight: bold;
             text-decoration: none;
         }
 
-        footer a:hover {
-            text-decoration: underline;
+        .footer-text {
+            font-weight: normal;
+            color: #ffffff;
         }
     </style>
 </head>
 <body>
-    <header class="header">
-        <img src="logo_ministerio.png" alt="Logo Ministerio" />
-        <h1>Ministerio de Salud y Protección Social</h1>
-        <img src="logo_gobierno.png" alt="Logo Gobierno" />
-    </header>
-    <main class="container">
-        <div class="certificado">
-            <h2>Certificado de Defunción: 24099220048960</h2>
-            <div class="info">
-                <div class="info-row">
-                    <span>Tipo de defunción:</span> No fetal
-                </div>
-                <div class="info-row">
-                    <span>Fallecido:</span> CC73559596 - LUIS ENRIQUE PAYARES MENDOZA
-                </div>
-                <div class="info-row">
-                    <span>Lugar de defunción:</span> GUAJIRA - MAICAO
-                </div>
-                <div class="info-row">
-                    <span>Institución prestadora de servicio de salud:</span> EMPRESA SOCIAL DEL ESTADO - HOSPITAL - SAN JOSE DE MAICAO - MAICAO
-                </div>
-                <div class="info-row">
-                    <span>Estado de registro:</span> Activo
-                </div>
-                <div class="info-row">
-                    <span>Fecha de registro:</span> 2024-12-26
-                </div>
-                <div class="info-row">
-                    <span>Fecha de impresión:</span> 2024-12-27 17:14
-                </div>
-                <div class="info-row">
-                    <span>Fecha de validación:</span> <span id="fecha-validacion"></span>
-                </div>
+    <header class="container-fluid py-3">
+        <div class="row align-items-center">
+            <div class="col-6 text-start">
+                <img src="https://th.bing.com/th/id/R.76ba9edda0991a141307fcc8dff38114?rik=vuAU6Xroq8BI2g&pid=ImgRaw&r=0" alt="Logominsalud" class="img-fluid" style="max-height: 70px;">
+            </div>
+            <div class="col-6 text-end">
+                <img src="https://nd.ruaf.gov.co/NDv2_CertificadoValidador/Images/Logo_App2.png" alt="Logo App2" class="img-fluid" style="max-height: 70px;">
             </div>
         </div>
-        <footer>
-            <p>
-                <span class="fw-bold">Atención al usuario:</span> Teléfono en Bogotá DC +57(1) 330 5043, en el resto del país 018000 960020<br>
-                Horario de lunes a viernes 7am a 6pm, sábados de 8am a 1pm jornada continua<br>
-                Centro de Contacto al Ciudadano<br>
-                Correo electrónico: 
-                <a href="mailto:soportend@minsalud.gov.co">soportend@minsalud.gov.co</a>
-            </p>
-            <p>Versión - 1.0.0.0<br>&copy; 2024 - Ministerio de Salud y Protección Social</p>
-        </footer>
+    </header>
+
+    <main class="container mt-4">
+        <section class="certificado">
+            <h2>Certificado de defunción: <span style="color: #ffffff; font-weight: normal;">24099220048960</span></h2>
+            <p><span class="label">Tipo de defunción:</span><span class="respuesta">No fetal</span></p>
+            <p><span class="label">Fallecido:</span><span class="respuesta">CC73559596 - LUIS ENRIQUE PAYARES MENDOZA</span></p>
+            <p><span class="label">Lugar de defunción:</span><span class="respuesta">GUAJIRA - MAICAO</span></p>
+            <p><span class="label">Institución prestadora de servicio de salud:</span><span class="respuesta">EMPRESA SOCIAL DEL ESTADO - HOSPITAL - SAN JOSE DE MAICAO - MAICAO</span></p>
+            <p><span class="label">Estado de registro:</span><span class="respuesta">Activo</span></p>
+            <p><span class="label">Fecha de registro:</span><span class="respuesta">2024-12-26</span></p>
+            <p><span class="label">Fecha de impresión:</span><span class="respuesta">2024-12-27 17:14</span></p>
+            <p><span class="label">Fecha de validación:</span><span class="respuesta" id="fecha-validacion"></span></p>
+        </section>
     </main>
+
+    <footer>
+        <p class="footer-text">
+            Atención al usuario: Teléfono en Bogotá D.C. +57(1)330 5043, en el resto del país 018000 960020<br>
+            Horario de lunes a viernes 7am a 6pm, sábados de 8am a 1pm jornada continua - Centro de Contacto al Ciudadano<br>
+            Correo electrónico: <a href="mailto:soportend@minsalud.gov.co" class="footer-link">soportend@minsalud.gov.co</a> Centro de Contacto al Ciudadano
+        </p>
+        <p class="footer-text">Versión - 1.0.0.0<br>&copy; 2024 - Ministerio de Salud y Protección Social</p>
+    </footer>
+
     <script>
         function mostrarFechaValidacion() {
             const fecha = new Date();
-            const opciones = {
-                year: 'numeric',
-                month: '2-digit',
-                day: '2-digit',
-                hour: '2-digit',
-                minute: '2-digit',
-                second: '2-digit',
-                hour12: false,
-            };
+            const opcionesFecha = { year: 'numeric', month: '2-digit', day: '2-digit' };
+            const opcionesHora = { hour: '2-digit', minute: '2-digit', second: '2-digit' };
 
-            const fechaHoraActual = new Intl.DateTimeFormat('es-ES', opciones).format(fecha);
-            document.getElementById('fecha-validacion').textContent = fechaHoraActual.replaceAll('/', '-');
+            const fechaActual = fecha.toLocaleDateString('es-ES', opcionesFecha).replace(/\//g, '-');
+            const horaActual = fecha.toLocaleTimeString('es-ES', opcionesHora);
+            document.getElementById('fecha-validacion').textContent = `${fechaActual} ${horaActual}`;
         }
-
         window.onload = mostrarFechaValidacion;
     </script>
 </body>
